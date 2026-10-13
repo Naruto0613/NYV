@@ -52,8 +52,33 @@
   scrollbar-width: none;
 }
 
-/* Landscape mobile optimization helper */
-@media (orientation: landscape) and (max-height: 500px) {
+/* Mobile-only landscape optimization (strictly phone screens with height <= 500px, width < 1024px) */
+@media (max-width: 1023px) and (orientation: landscape) and (max-height: 500px) {
+  .hero-mobile-landscape {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .hero-mobile-landscape-inner {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .hero-mobile-landscape-title {
+    font-size: 1.75rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .hero-mobile-landscape-desc {
+    font-size: 0.8125rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero-mobile-landscape-btn {
+    height: 2.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.8125rem !important;
+  }
   .landscape-compact-py {
     padding-top: 3.5rem !important;
     padding-bottom: 2rem !important;
@@ -62,3 +87,4 @@
     max-height: 94vh !important;
   }
 }
+
