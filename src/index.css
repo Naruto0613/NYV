@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-nav: 'Inter', 'Noto Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-primary);
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    color: #111827;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* Headings: bold or semibold with carefully controlled letter spacing */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+
+  /* Navigation: medium weight */
+  nav, .font-nav {
+    font-family: var(--font-nav);
+    font-weight: 500;
+  }
+
+  /* Buttons: medium or semibold weight */
+  button, .font-btn {
+    font-family: var(--font-primary);
+    font-weight: 500;
+  }
+}
+
+/* Custom scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Landscape mobile optimization helper */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-compact-py {
+    padding-top: 3.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .landscape-compact-modal {
+    max-height: 94vh !important;
+  }
+}

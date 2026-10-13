@@ -1,0 +1,6 @@
+{
+  "name": "National Youth Voice (NYV)",
+  "description": "Монголын Үндэсний Залуусын Дуу Хоолой (NYV) албан ёсны портал ба бүсчилсэн хүн ам зүй, өгөгдлийн дашборд систем",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
